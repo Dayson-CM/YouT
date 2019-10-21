@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/youtube.css">
+    <title>EL AMOR QUE PERDIMOS</title>
+    <link rel="icon" href="iconos/icono.ico">
+
+
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+</head>
+<body>
+    <div class="contenedor1">
+        <div class="menu1">
+             <header>
+            <div class="contenedor">
+                
+                <h1 class="icon-youtube-play">YouTube</h1> &nbsp &nbsp &nbsp &nbsp &nbsp
+                <span> <input type="text" id="buscar" style="width: 50%; height: 30%;">
+                    <button><img src="iconos/lupa,jpg.jpg" style="width: 27px; height: 27px;"></button></span>
+               
+                 <input type="checkbox" id="menu-bar">
+                <label class="icon-menu" for="menu-bar"></label>
+                 <nav class="menu">
+                     <a href="">Pagina Principal</a>
+                     <a href="">Tendencias</a>
+                     <a href="">Suscriptores</a>
+                     <a href="">Biblioteca</a>
+                     
+                 </nav>
+
+                 <label id="usuario"  for="usuario-bar"><img src="imagen/perfil.jpg" width="45px" height="45px"></label>
+            </div>
+        </header>
+    </div>
+        <div class="play">
+                  <video id="video" src="video/Prince Royce - El Amor Que Perdimos.mp4" 
+                  poster="imagen/Prince Royce.jpg" controls width="100%" height="100%"></video>            
+        
+        </div>
+
+        <div class="play-datos">
+                    <h2>Prince Royce - El Amor Que Perdimos</h2>
+                    <p>6,043,309 vistas • Se estrenó el 12 NOV. 2017                       
+                        <button class="icon-thumbs-up-alt"  onclick="meGusta()" style=" margin-left : 20%;"><span id="contador">0</span></button> &nbsp
+                        <button class="icon-thumbs-down-alt" onclick="noGusta()"><span id="descontador">0</span></button> &nbsp
+                        <img src="iconos/compartir.jpg" style="width: 2%; height: 2%; margin: 0%; padding: 0%;"><button> COMPARTIR</button> &nbsp
+                        <img src="iconos/guardar.jpg" style="width: 2%; height: 2%; margin: 0%; padding: 0%;"><button> GUARDAR </button> &nbsp
+                        <button>. . .</button>
+                    </p> <br> <hr> 
+
+        <img src="imagen/Prince Royce.jpg" width="30px" height="30px">
+            Prince Royce
+            <button  onclick="suscriptores()" style="background-color: red;  margin-left : 60%;">
+                <h3 style="color: white;"> SUSCRIBIRSE</h3></button> <br>
+                <span id="contador-sub" style="color: white;">0</span> &nbsp SUSCRIPTORES
+        <p>
+                Prince Royce - El Amor Que Perdimos (Lyric Video) <br>
+                 Ya disponible en: https://WarnerMusicSpain.lnk.to/Mevas...
+        </p>
+        </div>
+        <div class="publicidad">
+             <body onload="iniciar()">
+            <button class="cerrar" onclick="cerrar()">X</button>
+            <img id="m" src="publicidad/oeshle2.jpg">
+            
+         </div>
+
+         
+        <div class="recomendados">
+
+                <div class="vid">   
+                        <a href="te fuiste de aqui.html">
+                            <img src="imagen/te fuiste de aqui.jpeg" width="100%" height="100%">
+                            </a>
+                   </div>
+
+                 <div class="vid">   
+                        <a href="la mejor de todas.html">
+                          <img src="imagen/la mejor de todas.jpeg" width="100%" height="100%">
+                    </a>
+                 </div>
+
+                 <div class="vid">   
+                        <a href="como los de antes.html">
+                             <img src="imagen/como los antiguos.jpeg" width="100%" height="100%">
+                        </a>
+                    </div>
+
+                    <div class="vid">   
+                            <a href="que hago Yo.html">
+                                <img src="imagen/que hago Yo.jpeg" width="100%" height="100%">
+                                </a>
+                  </div>
+   
+
+                 <div class="vid">   
+                        <a href="me vas a ver.html">
+                            <img src="imagen/me vas a ver.jpeg" width="100%" height="100%">
+                            </a>
+                </div>
+
+            </div>
+   
+        <div class="comentarios">
+            <span class="cmt">
+                <img src="iconos/cmt1.jpg">Dulce M ___ (Hace 1 semana)<br>
+                Es de esas canciones tan bonitas, que deseas que dure el doble de minutos...♡ <br>
+                <button class="icon-thumbs-up-alt"  onclick="meGusta1()"><span id="contador_1">0</span></button>
+                <button class="icon-thumbs-down-alt" onclick="noGusta1()"><span id="descontador_1">0</span></button>RESPONDER
+            </span>
+            <br>
+            <span class="cmt">
+                        <img src="iconos/cmt3.jpg">Lidya Scarlet __ (Hace 5 días)<br>
+                        "Me Lo pensé dos veces y te elegí las dos"<br>
+                        <button class="icon-thumbs-up-alt"  onclick="meGusta2()"><span id="contador_2">0</span></button>
+                        <button class="icon-thumbs-down-alt" onclick="noGusta2()"><span id="descontador_2">0</span></button>RESPONDER
+            </span>
+            <br><br>
+            <span>comentar<br><input type="text"  style="width: 50%; height: 7%;"><button>enviar</button></span>
+        </div>
+    </div>
+    
+    
+</body>
+<script type="text/javascript">
+
+function suscriptores(){
+
+var s =document.getElementById("contador-sub").innerHTML;
+
+var n=Number(s); 
+
+var nn=n+1;
+document .getElementById("contador-sub").innerHTML=nn;
+}
+
+function mostrar(){
+       document.getElementById("parrafo").style.visibility="visible";
+
+    }   
+function ocultar(){
+      document.getElementById("parrafo").style.visibility="hidden";
+    }
+                         
+    function meGusta(){
+
+var s =document.getElementById("contador").innerHTML;
+
+var n=Number(s); 
+
+var nn=n+1;
+document .getElementById("contador").innerHTML=nn;
+}
+function noGusta(){
+
+var s =document.getElementById("descontador").innerHTML;
+
+var n=Number(s); 
+
+var nn=n+1;
+document .getElementById("descontador").innerHTML=nn;
+}
+
+function meGusta1(){
+        
+        var s =document.getElementById("contador_1").innerHTML;
+        
+        var n=Number(s); 
+        
+        var nn=n+1;
+        document .getElementById("contador_1").innerHTML=nn;
+        }
+        
+        function noGusta1(){
+        var s =document.getElementById("descontador_1").innerHTML;
+        
+        var n=Number(s); 
+        
+        var nn=n+1;
+        document .getElementById("descontador_1").innerHTML=nn;
+        }
+        function meGusta2(){
+        
+        var s =document.getElementById("contador_2").innerHTML;
+        
+        var n=Number(s); 
+        
+        var nn=n+1;
+        document .getElementById("contador_2").innerHTML=nn;
+        }
+        
+        function noGusta2(){
+        var s =document.getElementById("descontador_2").innerHTML;
+        
+        var n=Number(s); 
+        
+        var nn=n+1;
+        document .getElementById("descontador_2").innerHTML=nn;
+        }
+var ad1, dm, sw;
+	function iniciar(){
+		sw=false;
+		dm = document.getElementById("m");
+		ad1 = setInterval(cambiar,1500);//dispara la repeticion de cambiar cada 1500milisegundos
+		}
+	function cambiar(){
+		if (sw) {
+			dm.src= "publicidad/oeshle2.jpg";
+		}else{
+			dm.src= "publicidad/riplay1.jpg";		}
+		sw=!sw;
+	}
+	function cerrar(){
+		clearInterval(ad1);
+		document.getElementsByClassName("publicidad").style.display="none";
+	}
+</script>
+</html>
